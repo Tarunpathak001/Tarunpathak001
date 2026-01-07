@@ -61,7 +61,7 @@ My goal is to master the full stack—from how a kernel handles a container to h
     *   Jump Threading
 *   **Status**: Frontend → SSA → VM fully working, with unit tests for all stages.
 *   **Future Work**: CFG visualization, register allocation, bytecode optimization, function calls, source-level debugging.
-*   [View on GitHub](https://github.com/Tarunpathak001/Mini-LLVM)
+*   [View on GitHub](https://github.com/Tarunpathak001/MINI_LLVM)
 
 #### **Mini-Docker — Container Runtime from Scratch**
 *Deconstructing how containers actually work.*
