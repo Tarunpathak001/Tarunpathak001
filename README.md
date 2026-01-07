@@ -29,6 +29,40 @@ My goal is to master the full stack—from how a kernel handles a container to h
 
 ### 💻 Systems Engineering Studies
 
+#### **Mini-LLVM — SSA-Based Compiler for a Python-like Language**
+*A from-scratch compiler to deeply understand modern compiler internals.*
+
+*   **What I Built**: A complete compiler pipeline for a Mini-Python language, including a handwritten lexer, recursive-descent parser, semantic analysis, SSA-based IR, multiple optimization passes, bytecode lowering, and a stack-based virtual machine.
+*   **Why**: I wanted to go beyond parsing and truly understand how real compilers (LLVM-style) represent programs, handle control flow, and optimize using SSA and Phi nodes.
+*   **Key Learning**:
+    *   Static Single Assignment (SSA) form and Phi node construction
+    *   Control-flow graphs for if / while
+    *   Compiler optimizations like constant propagation, dead code elimination, and jump threading
+    *   Lowering high-level IR into executable bytecode
+    *   Bridging compiler theory with an actual executing VM
+*   **Pipeline**:
+    ```mermaid
+    graph TD
+        A[Source Code] --> B(Lexer)
+        B --> C(Parser)
+        C --> D(AST)
+        D --> E(Semantic Analysis)
+        E --> F(SSA IR Construction)
+        F --> G(SSA Optimizations)
+        G --> H(Bytecode Lowering)
+        H --> I(Stack-Based Virtual Machine)
+    ```
+*   **Optimizations Implemented**:
+    *   Constant Propagation & Constant Folding
+    *   Dead Code Elimination
+    *   Branch Simplification
+    *   Unreachable Block Elimination
+    *   Phi Simplification
+    *   Jump Threading
+*   **Status**: Frontend → SSA → VM fully working, with unit tests for all stages.
+*   **Future Work**: CFG visualization, register allocation, bytecode optimization, function calls, source-level debugging.
+*   [View on GitHub](https://github.com/Tarunpathak001/Mini-LLVM)
+
 #### **Mini-Docker — Container Runtime from Scratch**
 *Deconstructing how containers actually work.*
 *   **What I Built**: A functional container runtime using raw Linux system calls (namespaces, cgroups, chroot).
@@ -57,6 +91,7 @@ My goal is to master the full stack—from how a kernel handles a container to h
 *   **Tech**: Node.js, React.
 
 [View on GitHub](https://github.com/Tarunpathak001/CodeCache)
+
 
 ---
 
